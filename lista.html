@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="maneja_formulario.php" method="post">
+        <fieldset>
+            <legend>
+                <h1>Grillas</h1>
+            </legend>
+            <p>Porcentaje de uso de los lenguajes de programacion </p>
+            <a name="GrillaNormal"></a>
+            <table border="1" width="20%">
+                <tr>
+                    <th>Lenguaje</th>
+                    <th>Porcentaje</th>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>25.95%</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>21.42%</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>8.26%</td>
+                </tr>
+                <tr>
+                    <td>C#</td>
+                    <td>7.62%</td>
+                </tr>
+            </table>
+            </div>
+            <br>
+            <div>
+                <table border="1" cellpadding="3" width="50%">
+                    <caption>
+                        <a name="GrillaAvanzada"></a>
+                        <p>Personajes de comics</p>
+                    </caption>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><a href="#inicio">Pie de tabla</a></td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <th rowspan="2" width="20%">Nombre</th>
+                            <th colspan="2" align="center" width="30%">DC</th>
+                        </tr>
+                        <tr>
+                            <th align="center" width="15%">Identidad secreta</th>
+                            <th align="center" width="15%">Link</th>
+                        </tr>
+                        <tr>
+                            <td align="center">Superman</td>
+                            <td align="center">Clark Kent</td>
+                            <td align="center"> <a href="https://es.wikipedia.org/wiki/DC_Comics">dc</a></td>
+                        </tr>
+                        <tr>
+                            <td align="center">Batman</td>
+                            <td align="center">Bruce Wayne</td>
+                            <td align="center"><a href="https://es.wikipedia.org/wiki/DC_Comics">dc</a></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" align="center" width="20%">Nombre</th>
+                            <th colspan="2" align="center" width="30%">Marvel</th>
+                        </tr>
+                        <tr>
+                            <th align="center" width="15%">Identidad Secreta</th>
+                            <th align="center" width="15%">Link</th>
+                        </tr>
+                        <tr>
+                            <td align="center">Cap America</td>
+                            <td align="center">Steve Rogers</td>
+                            <td align="center"><a
+                                    href="https://es.wikipedia.org/wiki/Universo_cinematogr%C3%A1fico_de_Marvel">marvel</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">Spiderman</td>
+                            <td align="center">Peter Parker</td>
+                            <td align="center"><a
+                                    href="https://es.wikipedia.org/wiki/Universo_cinematogr%C3%A1fico_de_Marvel">marvel</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+        </fieldset>
+    </form>
+
+    <a name="imagenes"></a>
+    <form action="maneja_formulario.php" method="post">
+        <fieldset>
+            <legend>
+                <h1>Imagenes</h1>
+            </legend>
+            <h2>Java</h2>
+
+            <p><img src="data:image/png;base64,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"
+                    alt="Java" width="250" height="300">
+                <a href="https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)">Java</a> es un lenguaje de
+                programación y una plataforma informática que fue comercializada por primera vez en 1995 por Sun
+                Microsystems.
+            </p>
+
+            <br>
+            <h2>C</h2>
+
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/695px-C_Programming_Language.svg.png"
+                    alt="C" width="250" height="300">
+                <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C </a>es un lenguaje de programación de
+                propósito general originalmente desarrollado por Dennis Ritchie entre 1969 y 1972 en los Laboratorios
+                Bell,
+                como evolución del anterior lenguaje B, a su vez basado en BCPL.
+            </p>
+
+            <br>
+            <h2>Python</h2>
+
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
+                    alt="Pyhton" width="250" height="300">
+                <a href="https://es.wikipedia.org/wiki/Python">Python </a>es un lenguaje de alto nivel de programación
+                interpretado cuya filosofía hace hincapié en la legibilidad de su código
+            </p>
+
+            <br>
+            <h2>C#</h2>
+
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/C_Sharp_Logo_2023.svg/480px-C_Sharp_Logo_2023.svg.png"
+                    alt="C#" width="250" height="300">
+                <a href="https://es.wikipedia.org/wiki/C_Sharp">C#</a>es un lenguaje de programación multiparadigma
+                desarrollado y estandarizado por la empresa Microsoft como parte de su plataforma .NET
+            </p>
+
+            <br>
+            <h2>C++</h2>
+
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/300px-ISO_C%2B%2B_Logo.svg.png"
+                    alt="C++" width="250" height="300">
+                <a href="https://es.wikipedia.org/wiki/C%2B%2B">C++ </a>es un lenguaje de programación diseñado en 1979
+                por
+                Bjarne Stroustrup. La intención de su creación fue extender al lenguaje de programación C y añadir
+                mecanismos que permiten la manipulación de objetos.
+            </p>
+
+            <br>
+            <h2>VisualBasic</h2>
+
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Visual_Studio_Icon_2022.svg"
+                    alt="VisualBasic" width="250" height="300">
+                <a href="https://es.wikipedia.org/wiki/Visual_Basic">VisualBasic </a> es un lenguaje de programación
+                dirigido por eventos. Desarrollado por Alan Cooper para Microsoft, este lenguaje de programación es un
+                dialecto de BASIC con importantes agregados.
+            </p>
+
+            <br>
+            <h2>.NET</h2>
+
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/1024px-Microsoft_.NET_logo.svg.png"
+                    alt=".NET" width="250" height="300">
+                <a href="https://es.wikipedia.org/wiki/Microsoft_.NET">.NET </a>es un framework de Microsoft que hace un
+                énfasis en la transparencia de redes, con independencia de plataforma de hardware y que permite un
+                rápido
+                desarrollo de aplicaciones.
+            </p>
+            <br>
+            <h2>PHP</h2>
+
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1920px-PHP-logo.svg.png"
+                    alt="PHP" width="250" height="300">
+                <a href="https://es.wikipedia.org/wiki/PHP">PHP </a>es un lenguaje de programación interpretado2​ del
+                lado
+                del servidor y de uso general que se adapta especialmente al desarrollo web.
+            </p>
+            <br>
+            <h2>SWITF</h2>
+
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/SWIFT_2023_logo.svg/1920px-SWIFT_2023_logo.svg.png"
+                    alt="SWITF" width="250" height="300">
+                <a href="https://es.wikipedia.org/wiki/SWIFT">SWITF </a> (legalmente, S.W.I.F.T. SC),1​ es el acrónimo
+                de
+                Society for Worldwide Interbank Financial Telecommunication (literalmente, ‘Sociedad para las
+                Comunicaciones
+                Interbancarias y Financieras Mundiales’).
+            </p>
+            <br>
+            <h2>SQL</h2>
+
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Sql_database_shortcut_icon.png" alt="SQL"
+                    width="250" height="300">
+                <a href="https://es.wikipedia.org/wiki/SQL">SQL </a>es un lenguaje específico de dominio, diseñado para
+                administrar, y recuperar información de sistemas de gestión de bases de datos relacionales.
+            </p>
+            <br>
+            <h2>Ruby</h2>
+
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/300px-Ruby_logo.svg.png"
+                    alt="Ruby" width="250" height="300">
+                <a href="https://es.wikipedia.org/wiki/Ruby">Ruby </a> es un lenguaje de programación interpretado,
+                reflexivo y orientado a objetos, creado por el programador japonés Yukihiro "Matz" Matsumoto, quien
+                comenzó
+                a trabajar en Ruby en 1993, y lo presentó públicamente en 1995.
+            </p>
+            <button><a href="#inicio">Volver al inicio</a></button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
