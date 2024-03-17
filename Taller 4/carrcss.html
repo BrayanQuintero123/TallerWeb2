@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        select {
+            width: calc(100% - 6px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="maneja_registro.php" method="post">
+            <fieldset>
+                <legend>Formulario de Registro</legend>
+                <label for="id_pais">País</label><br>
+                <select name="id_pais" id="id_pais">
+                    <option value="">Selecciona un país</option>
+                    <option value="1">País 1</option>
+                    <option value="2">País 2</option>
+                    <!-- Agregar más opciones según sea necesario -->
+                </select><br>
+                <label for="id_movidoa">Tipo de Combustible</label><br>
+                <select name="id_movidoa" id="id_movidoa">
+                    <option value="">Selecciona un tipo de combustible</option>
+                    <option value="1">Gasolina</option>
+                    <option value="2">Diésel</option>
+                    <!-- Agregar más opciones según sea necesario -->
+                </select><br>
+                <label for="id_tipocoche">Tipo de Coche</label><br>
+                <select name="id_tipocoche" id="id_tipocoche">
+                    <option value="">Selecciona un tipo de coche</option>
+                    <option value="1">Sedán</option>
+                    <option value="2">SUV</option>
+                    <!-- Agregar más opciones según sea necesario -->
+                </select><br>
+                <label for="id_estado">Estado del Coche</label><br>
+                <select name="id_estado" id="id_estado">
+                    <option value="">Selecciona un estado del coche</option>
+                    <option value="1">Nuevo</option>
+                    <option value="2">Usado</option>
+                    <!-- Agregar más opciones según sea necesario -->
+                </select><br>
+                <label for="id_marca">Marca del Coche</label><br>
+                <select name="id_marca" id="id_marca">
+                    <option value="">Selecciona una marca del coche</option>
+                    <option value="1">Marca 1</option>
+                    <option value="2">Marca 2</option>
+                    <!-- Agregar más opciones según sea necesario -->
+                </select><br>
+                <label for="id_user">Usuario</label><br>
+                <select name="id_user" id="id_user">
+                    <option value="">Selecciona un usuario</option>
+                    <option value="1">Usuario 1</option>
+                    <option value="2">Usuario 2</option>
+                    <!-- Agregar más opciones según sea necesario -->
+                </select><br>
+                <label for="cc_pic">Descripción del Coche</label><br>
+                <input type="text" name="cc_pic" id="cc_pic" required><br>
+                <input type="submit" value="Registrar">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
