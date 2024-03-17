@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +10,33 @@
     <style>
         /* Add custom styles here */
         body {
-      		font-family: cursive;
+            font-family: cursive;
             background-color: #f8f9fa;
         }
+
         .container {
             max-width: 600px;
             margin: 50px auto;
             background-color: #fff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h3 {
+
+        h1,
+        h3 {
             color: #007bff;
         }
+
         legend {
             font-size: 24px;
             font-weight: bold;
         }
+
         label {
             font-weight: bold;
         }
+
         input[type="text"],
         input[type="password"],
         select {
@@ -40,9 +47,11 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
+
         input[type="file"] {
             margin-top: 10px;
         }
+
         input[type="submit"],
         input[type="reset"] {
             padding: 10px 20px;
@@ -52,14 +61,16 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         input[type="submit"]:hover,
         input[type="reset"]:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
+
 <body>
-      <form action="maneja_formulario.php" method="post">
+    <form action="maneja_formulario.php" method="post">
         <fieldset>
             <legend>
                 <h1>Formularios</h1>
@@ -183,4 +194,5 @@
                 <input type="reset" name="limpiar" value="Borrar los datos introducidos" />
             </form>
 </body>
+
 </html>
