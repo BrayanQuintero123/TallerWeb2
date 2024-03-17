@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,29 +12,34 @@
             margin: 0;
             padding: 0;
         }
+
         .container {
             width: 50%;
             margin: 50px auto;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         fieldset {
             border: none;
             padding: 0;
             margin: 0;
         }
+
         legend {
             font-size: 24px;
             font-weight: bold;
             color: #333;
             margin-bottom: 20px;
         }
+
         label {
             font-weight: bold;
             color: #555;
         }
+
         input[type="text"],
         select {
             width: calc(100% - 6px);
@@ -43,6 +49,7 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
+
         input[type="submit"] {
             padding: 12px 20px;
             background-color: #007bff;
@@ -51,11 +58,13 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <form action="maneja_registro.php" method="post">
@@ -270,7 +279,8 @@
                 <input type="text" name="detalle" id="detalle" required><br>
                 <label for="fechapublicacion">Fecha de Publicación</label><br>
                 <input type="text" name="fechapublicacion" id="fechapublicacion" required><br>
-<select name="moneda" id="moneda">
+                <label for="moneda">Moneda</label><br>
+                <select name="moneda" id="moneda">
                     <option value="EURO">Euro</option>
                     <option value="USD">Dólar estadounidense</option>
                     <option value="GBP">Libra esterlina</option>
@@ -290,4 +300,5 @@
         </form>
     </div>
 </body>
+
 </html>
