@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles here */
+        body {
+      		font-family: cursive;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h3 {
+            color: #007bff;
+        }
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            margin-top: 10px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+      <form action="maneja_formulario.php" method="post">
+        <fieldset>
+            <legend>
+                <h1>Formularios</h1>
+            </legend>
+            <a name="datos_usuario"></a>
+            <h3>Rellena tu CV</h3>
+            <form action="/cv/dataCV" method="post" enctype="multipart/form-data">
+                Nombre <br />
+                <input type="text" name="nombre" value="" size="20" maxlength="30" />
+                <br />
+                Apellidos <br />
+                <input type="text" name="apellidos" value="" size="50" maxlength="80" />
+                <br />
+                Contraseña <br />
+                <input type="password" name="contrasena" value="" maxlength="10" />
+                <br />
+                Confirme contraseña <br />
+                <input type="password" name="contrasena2" value="" maxlength="10" />
+                <br />
+                Identificación <br />
+                <select name="select">
+                    <option value="CC">CC</option>
+                    <option value="TI" selected>TI</option>
+                    <option value="CE">CE</option>
+                </select>
+                <input type="text" name="idsuj" value="" size="10" maxlength="9" />
+                <br />
+                Sexo <br />
+                <input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre
+                <br />
+                <input type="radio" name="sexo" value="mujer" /> Mujer
+                <br /><br />
+                Incluir mi foto </br> <input type="file" name="foto" />
+                <br /><br />
+                <input name="suscribir" type="checkbox" value="suscribir" checked="checked" />
+                Estudiante....
+                <br /><br />
+                <form action="maneja_formulario.php" method="post">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        Departamento <br />
+                        <select name="departamento" id="departamento">
+                            <option value="">- Selecciona -</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="Antioquia">Antioquia</option>
+                            <option value="Arauca">Arauca</option>
+                            <option value="Atlántico">Atlántico</option>
+                            <option value="Bolívar">Bolívar</option>
+                            <option value="Boyacá">Boyacá</option>
+                            <option value="Caldas">Caldas</option>
+                            <option value="Caquetá">Caquetá</option>
+                            <option value="Casanare">Casanare</option>
+                            <option value="Cauca">Cauca</option>
+                            <option value="Cesar">Cesar</option>
+                            <option value="Chocó">Chocó</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Cundinamarca">Cundinamarca</option>
+                            <option value="Guainía">Guainía</option>
+                            <option value="Guaviare">Guaviare</option>
+                            <option value="Huila">Huila</option>
+                            <option value="La Guajira">La Guajira</option>
+                            <option value="Magdalena">Magdalena</option>
+                            <option value="Meta">Meta</option>
+                            <option value="Nariño">Nariño</option>
+                            <option value="Norte de Santander">Norte de Santander</option>
+                            <option value="Putumayo">Putumayo</option>
+                            <option value="Quindío">Quindío</option>
+                            <option value="Risaralda">Risaralda</option>
+                            <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                            <option value="Santander">Santander</option>
+                            <option value="Sucre">Sucre</option>
+                            <option value="Tolima">Tolima</option>
+                            <option value="Valle del Cauca">Valle del Cauca</option>
+                            <option value="Vaupés">Vaupés</option>
+                            <option value="Vichada">Vichada</option>
+
+                        </select>
+                        <br></br>
+                        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                        <br>
+                        <br />
+                        <input type="text" name="dia" value="" size="8" maxlength="30" />
+                        de
+                        <select name="meses" id="meses">
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septiembre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select>
+                        de
+                        <input type="text" name="año" value="" size="8" maxlength="30" />
+                        <br></br>
+                        Temas de interés
+                        <legend>
+                            <select name="tema" multiple>
+                                <option value="">Selecciona un tema</option>
+                                <option value="administracion_bd">Administración de bases de datos</option>
+                                <option value="analisis_programacion">Análisis y programación</option>
+                                <option value="arquitectura">Arquitectura</option>
+                                <option value="calidad">Calidad</option>
+                                <option value="erp_cmr_bi">ERP, CMR, Business Intelligence</option>
+                                <option value="gestion_proyectos">Gestión de proyectos</option>
+                                <option value="hardware_redes_seguridad">Hardware, redes y seguridad</option>
+                                <option value="helpdesk">Helpdesk</option>
+                                <option value="sistemas">Sistemas</option>
+                                <option value="telecomunicaciones">Telecomunicaciones</option>
+                            </select>
+                        </legend>
+
+                    </fieldset>
+                </form>
+                <input type="submit" name="enviar" value="Guardar cambios" />
+                <input type="reset" name="limpiar" value="Borrar los datos introducidos" />
+            </form>
+</body>
+</html>
