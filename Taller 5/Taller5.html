@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Validación de Formulario Avanzada</title>
+</head>
+<body>
+
+<!-- Aquí va tu estructura HTML del formulario -->
+<form id="formularioUsuario" novalidate>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <span id="errorNombre" style="color: red;"></span>
+    <br><br>
+  
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido">
+    <span id="errorApellido" style="color: red;"></span>
+    <br><br>
+  
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion">
+    <span id="errorDireccion" style="color: red;"></span>
+    <br><br>
+  
+    <label for="ccusuario">CC Usuario:</label>
+    <input type="text" id="ccusuario" name="ccusuario">
+    <span id="errorCCUsuario" style="color: red;"></span>
+    <br><br>
+  
+    <label for="ccpasswd">Contraseña:</label>
+    <input type="password" id="ccpasswd" name="ccpasswd">
+    <span id="errorCCPasswd" style="color: red;"></span>
+    <br><br>
+  
+    <label for="confirmar_passwd">Confirmar Contraseña:</label>
+    <input type="password" id="confirmar_passwd" name="confirmar_passwd">
+    <span id="errorConfirmarPasswd" style="color: red;"></span>
+    <br><br>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <span id="errorEmail" style="color: red;"></span>
+    <br><br>
+  
+    <button type="submit">Enviar</button>
+  </form>
+<!-- Referencia al archivo JavaScript externo -->
+<script src="validacion.js"></script>
+
+</body>
+</html>
