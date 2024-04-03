@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Validación de Formulario Avanzada</title>
-  <link rel="stylesheet" href="estilo.css"> <!-- Corregido a minúsculas -->
+  <link rel="stylesheet" href="dualRangeSlider.css">
 </head>
 
 <body>
@@ -45,52 +45,58 @@
     <span id="errorEmail" style="color: red;"></span>
     <br><br>
 
-  <label for="gustos">Registro de Gustos:</label>
-  <div id="seccionGustos">
-    <label><input type="radio" name="gustos" value="si"> Sí</label>
-    <label><input type="radio" name="gustos" value="no" checked> No</label>
-  </div>
+    <label for="gustos">Registro de Gustos:</label>
+    <div id="seccionGustos">
+      <label><input type="radio" name="gustos" value="si"> Sí</label>
+      <label><input type="radio" name="gustos" value="no" checked> No</label>
+    </div>
 
-  <div id="camposGustos" style="display: none;">
-    <label for="color">Color Favorito:</label>
-    <input type="text" id="color" name="color">
-    <br><br>
+    <div id="camposGustos" style="display: none;">
+      <label for="color">Color Favorito:</label>
+      <input type="text" id="color" name="color">
+      <br><br>
 
-    <label for="marca">Marca de Carro Favorita:</label>
-    <input type="text" id="marca" name="marca">
-    <br><br>
+      <label for="marca">Marca de Carro Favorita:</label>
+      <input type="text" id="marca" name="marca">
+      <br><br>
 
-    <label for="estilo">Estilo de Carro Favorito:</label>
-    <input type="text" id="estilo" name="estilo">
-    <br><br>
+      <label for="estilo">Estilo de Carro Favorito:</label>
+      <input type="text" id="estilo" name="estilo">
+      <br><br>
 
-    <label for="modelo">Modelo de Carro Favorito:</label>
-    <input type="text" id="modelo" name="modelo">
-    <br><br>
+      <label for="modelo">Modelo de Carro Favorito:</label>
+      <input type="text" id="modelo" name="modelo">
+      <br><br>
 
-    <label for="precio">Precio Mínimo - Máximo para un vehículo: (Dado en pesos colombianos)</label>
+      <label for="precio">Precio Mínimo - Máximo para un vehículo: (Dado en pesos colombianos)</label>
 
-    <div class="range_container">
-      <div class="sliders_control">
-        <label for="fromSlider">Desde:</label>
-        <input id="fromSlider" type="range" value="0" min="0" max="1000000000" />
-        <output id="fromOutput" class="slider-value">0</output>
+      <div class="range_container">
+        <div class="sliders_control">
+          <input id="fromSlider" type="range" value="10" min="0" max="100" />
+          <input id="toSlider" type="range" value="40" min="0" max="100" />
+        </div>
+        <div class="form_control">
+          <div class="form_control_container">
+            <div class="form_control_container__time">Min</div>
+            <input class="form_control_container__time__input" type="number" id="fromInput" value="10" min="0"
+              max="100" />
+          </div>
+          <div class="form_control_container">
+            <div class="form_control_container__time">Max</div>
+            <input class="form_control_container__time__input" type="number" id="toInput" value="40" min="0"
+              max="100" />
+          </div>
+        </div>
       </div>
-      <div class="sliders_control">
-        <label for="toSlider">Hasta:</label>
-        <input id="toSlider" type="range" value="1000000000" min="0" max="1000000000" />
-        <output id="toOutput" class="slider-value">1000000000</output>
-      </div>
-    </div>    
 
-    <span id="errorGustos" style="color: red;"></span> <!-- Agregado el elemento errorGustos -->
-    <br><br>
-  </div>
+      <span id="errorGustos" style="color: red;"></span> <!-- Agregado el elemento errorGustos -->
+      <br><br>
+    </div>
 
-  <button type="submit">Enviar</button>
-</form>
+    <button type="submit">Enviar</button>
+  </form>
+  
   <script src="validacion.js"></script>
-
 </body>
 
 </html>
