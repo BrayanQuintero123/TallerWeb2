@@ -1,7 +1,7 @@
 .range_container {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 50%;
   margin: 35% auto;
 }
 
@@ -35,7 +35,7 @@ input[type=range]::-moz-range-thumb {
   width: 24px;
   height: 24px;
   background-color: #fff;
-  border-radius: 50%;
+  border-radius: 20%;
   box-shadow: 0 0 0 1px #C6C6C6;
   cursor: pointer;
 }
@@ -75,4 +75,20 @@ input[type="range"] {
 #fromSlider {
   height: 0;
   z-index: 1;
+}
+
+output {
+  display: inline-block;
+  width: 30px;
+  /* Ancho suficiente para mostrar el valor */
+  margin-left: 10px;
+  /* Ajustar según sea necesario */
+}
+
+/* Estilos adicionales para los outputs */
+#fromOutput,
+#toOutput {
+  font-size: 16px;
+  color: #000;
+  /* Color del texto */
 }

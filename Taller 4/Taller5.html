@@ -46,48 +46,53 @@
     <br><br>
 
     <label for="gustos">Registro de Gustos:</label>
+    <br>
     <div id="seccionGustos">
       <label><input type="radio" name="gustos" value="si"> Sí</label>
       <label><input type="radio" name="gustos" value="no" checked> No</label>
     </div>
+    <br>
 
     <div id="camposGustos" style="display: none;">
       <label for="color">Color Favorito:</label>
       <input type="text" id="color" name="color">
+      <span id="errorColor" style="color: red;"></span>
       <br><br>
 
       <label for="marca">Marca de Carro Favorita:</label>
       <input type="text" id="marca" name="marca">
+      <span id="errorMarca" style="color: red;"></span>
       <br><br>
 
       <label for="estilo">Estilo de Carro Favorito:</label>
       <input type="text" id="estilo" name="estilo">
+      <span id="errorEstilo" style="color: red;"></span>
       <br><br>
 
       <label for="modelo">Modelo de Carro Favorito:</label>
       <input type="text" id="modelo" name="modelo">
+      <span id="errorModelo" style="color: red;"></span>
       <br><br>
 
       <label for="precio">Precio Mínimo - Máximo para un vehículo: (Dado en pesos colombianos)</label>
-
       <div class="range_container">
         <div class="sliders_control">
-          <input id="fromSlider" type="range" value="10" min="0" max="100" />
-          <input id="toSlider" type="range" value="40" min="0" max="100" />
+          <input id="fromSlider" type="range" min="0" max="1000000000" />
+          <input id="toSlider" type="range" min="0" max="1000000000" />
+
         </div>
         <div class="form_control">
           <div class="form_control_container">
             <div class="form_control_container__time">Min</div>
-            <input class="form_control_container__time__input" type="number" id="fromInput" value="10" min="0"
-              max="100" />
+            <output for="fromSlider" id="fromOutput">0</output>
           </div>
           <div class="form_control_container">
             <div class="form_control_container__time">Max</div>
-            <input class="form_control_container__time__input" type="number" id="toInput" value="40" min="0"
-              max="100" />
+            <output for="toSlider" id="toOutput">0</output>
           </div>
         </div>
       </div>
+
 
       <span id="errorGustos" style="color: red;"></span> <!-- Agregado el elemento errorGustos -->
       <br><br>
@@ -95,8 +100,8 @@
 
     <button type="submit">Enviar</button>
   </form>
-  
   <script src="validacion.js"></script>
+
 </body>
 
 </html>

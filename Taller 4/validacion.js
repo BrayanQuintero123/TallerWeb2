@@ -110,14 +110,24 @@ function updateSliderValue(input, output) {
 // Obtener los elementos de los sliders y los outputs
 const fromSlider = document.getElementById('fromSlider');
 const toSlider = document.getElementById('toSlider');
-const fromOutput = document.getElementById('fromInput');
-const toOutput = document.getElementById('toInput');
+const fromOutput = document.getElementById('fromOutput');
+const toOutput = document.getElementById('toOutput');
 
-// Actualizar los valores debajo de los sliders cuando se muevan
-updateSliderValue(fromSlider, fromOutput);
-updateSliderValue(toSlider, toOutput);
+// Función para actualizar el valor del slider y el output cuando se cambia manualmente
+function updateSliderAndOutput(input, output) {
+  input.value = output.value; // Actualizar el valor del slider
+  updateSliderValue(input, output); // Actualizar el valor del output
+}
 
-// Asignar eventos input a los sliders
+fromOutput.addEventListener('input', function () {
+  updateSliderAndOutput(fromSlider, fromOutput);
+});
+
+toOutput.addEventListener('input', function () {
+  updateSliderAndOutput(toSlider, toOutput);
+});
+
+// Actualizar el valor debajo de los sliders cuando se muevan
 fromSlider.addEventListener('input', function () {
   updateSliderValue(fromSlider, fromOutput);
 });
@@ -133,12 +143,40 @@ function validarGustos() {
   const estilo = document.getElementById('estilo').value;
   const modelo = document.getElementById('modelo').value;
 
-  const mensajeError = document.getElementById('errorGustos');
-  if (!color || !marca || !estilo || !modelo) {
-    mensajeError.textContent = 'Por favor, complete todos los campos de gustos.';
-    return false;
+  const mensajeErrorColor = document.getElementById('errorColor');
+  const mensajeErrorMarca = document.getElementById('errorMarca');
+  const mensajeErrorEstilo = document.getElementById('errorEstilo');
+  const mensajeErrorModelo = document.getElementById('errorModelo');
+
+  let esValido = true;
+
+  if (!color) {
+    mensajeErrorColor.textContent = 'Este campo es obligatorio.';
+    esValido = false;
+  } else {
+    mensajeErrorColor.textContent = '';
   }
 
-  mensajeError.textContent = '';
-  return true;
+  if (!marca) {
+    mensajeErrorMarca.textContent = 'Este campo es obligatorio.';
+    esValido = false;
+  } else {
+    mensajeErrorMarca.textContent = '';
+  }
+
+  if (!estilo) {
+    mensajeErrorEstilo.textContent = 'Este campo es obligatorio.';
+    esValido = false;
+  } else {
+    mensajeErrorEstilo.textContent = '';
+  }
+
+  if (!modelo) {
+    mensajeErrorModelo.textContent = 'Este campo es obligatorio.';
+    esValido = false;
+  } else {
+    mensajeErrorModelo.textContent = '';
+  }
+
+  return esValido;
 }
