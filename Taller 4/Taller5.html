@@ -74,30 +74,47 @@
       <span id="errorModelo" style="color: red;"></span>
       <br><br>
 
-      <label for="precio">Precio Mínimo - Máximo para un vehículo: (Dado en pesos colombianos)</label>
-      <div class="range_container">
-        <div class="sliders_control">
-          <input id="fromSlider" type="range" min="4000000" max="300000000" />
-          <input id="toSlider" type="range" min="4000000" max="300000000" />
-
-        </div>
-        <div class="form_control">
-          <div class="form_control_container">
-            <div class="form_control_container__time">Min</div>
-            <output for="fromSlider" id="fromOutput">0</output>
-          </div>
-          <div class="form_control_container">
-            <div class="form_control_container__time">Max</div>
-            <output for="toSlider" id="toOutput">0</output>
-          </div>
-        </div>
-      </div>
-
-
       <span id="errorGustos" style="color: red;"></span> <!-- Agregado el elemento errorGustos -->
       <br><br>
     </div>
 
+    <div class="price-input-container"> 
+      <div class="price-input"> 
+          <div class="price-field"> 
+              <span>Valor Minimo</span> 
+              <input type="number" 
+                     class="min-input" 
+                     value="2500"> 
+          </div> 
+          <div class="price-field"> 
+              <span>Valor Maximo</span> 
+              <input type="number" 
+                     class="max-input" 
+                     value="8500"> 
+          </div> 
+      </div> 
+      <div class="slider-container"> 
+          <div class="price-slider"> 
+          </div> 
+      </div> 
+  </div> 
+
+  <!-- Slider -->
+  <div class="range-input"> 
+      <input type="range" 
+             class="min-range" 
+             min="0" 
+             max="10000" 
+             value="2500" 
+             step="1"> 
+      <input type="range" 
+             class="max-range" 
+             min="0" 
+             max="10000" 
+             value="8500" 
+             step="1"> 
+  </div> 
+</div> 
     <button type="submit">Enviar</button>
   </form>
   <script src="validacion.js"></script>
