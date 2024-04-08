@@ -20,6 +20,7 @@ function validarFormulario() {
     mensaje += "Nombre: " + document.getElementById("nombre").value + "\n";
     mensaje += "Apellido: " + document.getElementById("apellido").value + "\n";
     mensaje += "Fecha de Nacimiento: " + document.getElementById("fechaNacimiento").value + "\n";
+    mensaje += "Edad: " + calcularEdad() + "\n";
     mensaje += "Correo: " + document.getElementById("correo").value + "\n";
     mensaje += "Usuario: " + document.getElementById("usuario").value + "\n";
     mensaje += "Enfermedades Contagiosas: " + document.getElementById("enfermedadesContagiosas").value + "\n";
@@ -36,4 +37,15 @@ function mostrarEnfermedades() {
     } else {
         enfermedadesDiv.style.display = "none";
     }
+}
+
+function calcularEdad() {
+    var fechaNacimiento = new Date(document.getElementById("fechaNacimiento").value);
+    var hoy = new Date();
+    var edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+    var mes = hoy.getMonth() - fechaNacimiento.getMonth();
+    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+        edad--;
+    }
+    return edad;
 }
