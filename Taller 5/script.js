@@ -30,6 +30,15 @@ function validarFormulario() {
     mensaje += "Usuario: " + document.getElementById("usuario").value + "\n";
     mensaje += "Enfermedades Contagiosas: " + document.getElementById("enfermedadesContagiosas").value + "\n";
 
+    var enfermedades = document.getElementById("enfermedades").value;
+    if (enfermedades === "si") {
+        // Si el usuario seleccionó "Sí", añadir la opción seleccionada en enfermedades contagiosas
+        mensaje += "Enfermedades Contagiosas: " + document.getElementById("enfermedadesContagiosas").value + "\n";
+    } else {
+        // Si el usuario seleccionó "No", mostrar un mensaje específico
+        mensaje += "Enfermedades Contagiosas: El usuario no tiene enfermedades contagiosas.\n";
+    }
+    
     alert(mensaje);
     return true;
 }
