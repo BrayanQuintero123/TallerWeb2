@@ -4,12 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Registro de Usuario</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
+    
     .error {
         color: red;
     }
     #enfermedadesDiv {
         display: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
     }
 </style>
 </head>
@@ -87,6 +105,65 @@
 </form>
 
 <script src="script.js"></script>
+
+<h2>Grilla en jQuery</h2>
+
+<input type="text" id="searchInput" placeholder="Filtrar por nombre">
+<table id="userGrid">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Usuario</th>
+      <th>Email</th>
+      <th>Dirección</th>
+      <th>Teléfono</th>
+      <th>Sitio web</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+  // Función de cargado de usuarios desde el JSON
+  function loadUsers() {
+    $.ajax({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      method: 'GET',
+      success: function (response) {
+        // Limpiar la grilla antes de agregar nuevos datos
+        $('#userGrid tbody').empty();
+        // Iterar sobre los usuarios las filas a la grilla
+        response.forEach(function (user) {
+          $('#userGrid tbody').append(`
+          <tr>
+            <td>${user.id}</td>
+            <td>${user.name}</td>
+            <td>${user.username}</td>
+            <td>${user.email}</td>
+            <td>${user.address.city}, ${user.address.street}, ${user.address.suite}</td>
+            <td>${user.phone}</td>
+            <td>${user.website}</td>
+          </tr>
+        `);
+        });
+      }
+    });
+  }
+
+  // Llamado a la función para cargar los usuarios en la pagina
+  $(document).ready(function () {
+    loadUsers();
+
+    // Filtrado por cualquier dato
+    $('#searchInput').on('keyup', function () {
+      var value = $(this).val().toLowerCase();
+      $('#userGrid tbody tr').filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+</script>
 
 </body>
 </html>

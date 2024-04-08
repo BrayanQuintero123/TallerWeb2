@@ -28,7 +28,6 @@ function validarFormulario() {
     mensaje += "Edad: " + calcularEdad() + "\n";
     mensaje += "Correo: " + document.getElementById("correo").value + "\n";
     mensaje += "Usuario: " + document.getElementById("usuario").value + "\n";
-    mensaje += "Enfermedades Contagiosas: " + document.getElementById("enfermedadesContagiosas").value + "\n";
 
     var enfermedades = document.getElementById("enfermedades").value;
     if (enfermedades === "si") {
