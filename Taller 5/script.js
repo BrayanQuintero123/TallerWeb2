@@ -10,6 +10,11 @@ function validarFormulario() {
     // Validación de usuario
     var usuario = document.getElementById("usuario").value;
     var confirmUsuario = document.getElementById("confirmUsuario").value;
+    var usuarioPattern = /^[a-zA-Z0-9_]+$/; // Acepta letras (mayúsculas y minúsculas), números y guiones bajos
+    if (!usuario.match(usuarioPattern)) {
+        alert("El usuario solo puede contener letras (mayúsculas y minúsculas), números y guiones bajos.");
+        return false;
+    }
     if (usuario != confirmUsuario) {
         alert("Los usuarios no coinciden.");
         return false;
@@ -24,7 +29,7 @@ function validarFormulario() {
     mensaje += "Correo: " + document.getElementById("correo").value + "\n";
     mensaje += "Usuario: " + document.getElementById("usuario").value + "\n";
     mensaje += "Enfermedades Contagiosas: " + document.getElementById("enfermedadesContagiosas").value + "\n";
-    
+
     alert(mensaje);
     return true;
 }
@@ -40,12 +45,13 @@ function mostrarEnfermedades() {
 }
 
 function calcularEdad() {
-    var fechaNacimiento = new Date(document.getElementById("fechaNacimiento").value);
-    var hoy = new Date();
-    var edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
-    var mes = hoy.getMonth() - fechaNacimiento.getMonth();
-    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
-        edad--;
+        var fechaNacimiento = new Date(document.getElementById("fechaNacimiento").value);
+        var hoy = new Date();
+        var edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+        var mes = hoy.getMonth() - fechaNacimiento.getMonth();
+        if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+            edad--;
+        }
+        document.getElementById("edad").innerText = edad;
+        return edad;
     }
-    return edad;
-}
