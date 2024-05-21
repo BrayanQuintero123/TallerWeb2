@@ -6,7 +6,7 @@
     <title>Persona</title>
 </head>
 <body>
-    <h1>Esta es la pagina principal de Persona</h1>
+    <h1>Esta es la página principal de Persona</h1>
     <table>
         <thead>
             <th>Documento</th>
@@ -22,15 +22,15 @@
                 <td>Medellin</td>
             </tr>            
         </tbody>
-
-        {% if persona %}
-            <ul>
-                {% for p in persona %}
-                    <li><b>nombre</b>{{ p.nombre }} {{ p.apellido }} <b>Pais: </b>{{p.lugarresidencia}}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-
     </table>
+
+    {% if persona %}
+        <h2>Personas Registradas</h2>
+        <ul>
+            {% for p in persona %}
+                <li><b>Nombre:</b> {{ p.nombre }} {{ p.apellido }} <b>País:</b> {{ p.lugarresidencia }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </body>
 </html>
