@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona</title>
+</head>
+<body>
+    <h1>Esta es la pagina principal de Persona</h1>
+    <table>
+        <thead>
+            <th>Documento</th>
+            <th>Ciudad</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1098572149</td>
+                <td>Barranquilla</td>
+            </tr>
+            <tr>
+                <td>1098547231</td>
+                <td>Medellin</td>
+            </tr>            
+        </tbody>
+
+        {% if persona %}
+            <ul>
+                {% for p in persona %}
+                    <li><b>nombre</b>{{ p.nombre }} {{ p.apellido }} <b>Pais: </b>{{p.lugarresidencia}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    </table>
+</body>
+</html>
