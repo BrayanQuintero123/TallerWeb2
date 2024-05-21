@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tipodocumento.apps.TipodocumentoConfig',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'hcblhkiw',
+        'USER': 'hcblhkiw',
+        'PASSWORD': 'PxvuHenbqj4rNMdUw4ps0GbbRLllVEeC',
+        'HOST': 'bubble.db.elephantsql.com',
+        'PORT': '5432',
     }
 }
 
