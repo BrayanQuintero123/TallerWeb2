@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+    <title>Books</title>
+{% endblock extrahead %}
+
+{% block content %}
+    <div class="container">
+        <h1>Lista de libros:</h1>
+        {% if libros %}
+            <ul>
+                {% for libro in libros %}
+                    <li>
+                        <b>Nombre:</b> {{ libro.title }} <br>
+                        <b>Autor:</b> {{ libro.author.first_name }} {{ libro.author.last_name }} <br>
+                        <b>Descripción:</b> {{ libro.description }}
+                    </li>
+
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <a href="{% url 'new_book' %}">
+            <button> Agregar </button>
+        </a>
+    </div>
+{% endblock content %}
