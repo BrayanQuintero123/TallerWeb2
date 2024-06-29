@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+    <title>Buscar</title>
+{% endblock extrahead %}
+
+{% block content %}
+<div class='container'>
+    <form method="get" action="{% url 'buscar' %}">
+        <label for="autor_id">Autor:</label>
+        <select id="autor_id" name="autor_id">
+            <option value="">Todos</option>
+            {% for autor in autores %}
+                <option value="{{ autor.id }}">{{ autor.first_name }} {{ autor.last_name}}</option>
+            {% endfor %}
+        </select>
+        
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria">
+            <option value="">Todas</option>
+            {% for categoria in categorias %}
+                <option value="{{ categoria.id }}">{{ categoria.name }}</option>
+            {% endfor %}
+        </select>
+        
+        <button type="submit">Buscar Libros</button>
+    </form>
+    
+    {% if libros %}
+                <ul>
+                    {% for libro in libros %}
+                        <li>
+                            <b>Nombre:</b> {{ libro.title }} <br>
+                            <b>Autor:</b> {{ libro.author.first_name }} {{ libro.author.last_name }} <br>
+                            <b>Descripción:</b> {{ libro.description }}
+                        </li>
+    
+                    {% endfor %}
+                </ul>
+    {% else %}
+    <p>No hay libros</p>
+    {% endif %}
+</div>
+{% endblock content %}
