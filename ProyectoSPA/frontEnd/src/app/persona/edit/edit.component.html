@@ -1,0 +1,23 @@
+<div>
+    <div>
+        <form action="">
+            <div>
+                <label>Nombre</label>
+                <input [(ngModel)]="persona.nombre" name="nombre">
+            </div>
+            <div>
+                <label>Apellido</label>
+                <input [(ngModel)]="persona.apellido" name="apellido">
+            </div>
+            <div>
+                <label>LogIn</label>
+                <input [(ngModel)]="persona.login" name="login">
+            </div>
+            <div>
+                <label>PassWord</label>
+                <input [(ngModel)]="persona.pass" name="pass">
+            </div>
+            <button (click)='Actualizar(persona)'>Actualizar</button>
+        </form>
+    </div>
+</div>
